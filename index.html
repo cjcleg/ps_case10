@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+
+    Chapter 11 Case Project 
+
+    Author: Carla Cleghorn
+    Date: 7-29-21
+
+    Filename: index.html
+
+  -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>The Plant Shoppe</title>
+   <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://use.typekit.net/tbf4rqo.css">
+
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+          <a class="logo" title="The Plant Shoppe" href="index.html"> <img src="logo.jpg" alt="logo"> </a>
+      </h1>
+   </header>
+
+   <nav>
+      <ul>
+        <li>
+          <a title="Home" id= "home" class="active" href="index.html">HOME</a>
+        </li>
+
+        <li>
+         <a title="Shop" id= "shop" href="shop.html">SHOP</a>
+        </li>
+
+         <li>
+         <a title="Care" id= "care" href="care.html">CARE + TIPS</a>
+        </li>
+
+        <li>
+          <a title="About Us" id="about" href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+          <a title="Contact" id= "contact" href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="link">
+      <p> Head to the <a href="contact.html">contact</a> page to order a plant-o-gram! </p>
+    </section>
+
+    <h1>Plant Gallery Images!</h1>
+
+    <!-- defines a div to display images called by API -->
+    <div id="images"> </div>
+
+    <main>
+      <div id="container">
+        <img src="plant1.jpg" alt="tropical leaves">
+        <img src="plant2.jpg" alt="houseplants">
+        <img src="plant4.jpg" alt="monstera leaves"> 
+      </div>
+
+    <!--create an section to display the plant of the day--> 
+
+    <section class="day">
+      <h3>Plant Of the Day: </h3>
+      <p id="day"></p> <!--place to output information based on results of the conditional statement -->
+    </section>  
+     
+    </main>
+
+    <footer>
+      carlajcleghorn@gmail.com &copy; The Plant Shoppe. This site is for educational purposes only. 
+    </footer>
+
+    <script src="plants2.js"></script>
+    <script src="11.js"></script>
+
+    <script src= "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=processJSON&tags=plant&tagmode=any&format=json"></script>
+    
+</body>
+</html>
